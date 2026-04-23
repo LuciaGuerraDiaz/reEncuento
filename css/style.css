@@ -1,0 +1,238 @@
+/* Logo manenejo 
+Class logo
+
+class="logo_desktop"
+class="logo_chico"
+class="logo_mobile"
+class="logo_menu"
+
+
+/* -----------------------*/
+/* El cuerpo del contenido*/
+body {
+    background-color: #f5f5f5; /* Un verde clarito para probar */
+    font-family: 'Montserrat', sans-serif;
+}
+/*Titulos*/
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-style: bold;
+}
+
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 30;
+    font-style: normal;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 20;
+    font-style: normal;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 12;
+    font-style: normal;
+}
+
+.title-botton {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 10;
+    font-style: normal; 
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* Imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Configuración general del Header */
+.main_header {
+    background-color: #ffffff; /* Fondo blanco como la referencia */
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo y Texto */
+.logo-brand {
+    display: flex;
+    align-items: left;
+    gap: 10px;
+}
+
+.slogan {
+    font-size: 0.8rem;
+    margin: 0;
+    font-weight: 400;
+    color: #667;
+}
+
+/* Navegación */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #166534; /* Cambio de color al pasar el mouse */
+}
+
+/*Submenus/*
+
+/* Asegura que el padre sea la referencia de posición */
+.dropdown {
+    position: relative;
+}
+
+/* Estilo del submenú oculto */
+.submenu {
+    display: none;             /* Lo oculta por defecto */
+    position: absolute;        /* Lo posiciona justo debajo del padre */
+    top: 100%;                 /* Aparece al ras del header */
+    left: 0;
+    background-color: #ffffff; /* Fondo blanco */
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Sombra para que flote */
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* Estilo de los links dentro del submenú */
+.submenu li a {
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background-color: #f0fdf4; /* Tu verde clarito al pasar el mouse */
+    color: #166534;            /* Tu verde bosque */
+}
+
+/* MOSTRAR EL SUBMENÚ AL PASAR EL MOUSE */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Tarjetas, para mostrar pasos o testimonios */
+.grilla-pasos {
+    display: grid; 
+    padding: 60px 100px 60px 100px;
+    grid-template-columns: repeat(3, 1fr); /* Crea las 3 columnas iguales */
+    gap: 50px; /* Espacio entre las tarjetas */
+    background-color: var(--color-turquesa); /* Color oscuro como el 'Ingresar' de la foto */
+    color: var(--color-textoT);
+    border-radius: var(--radio-borde); /* Bordes redondeados */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.paso-card {
+    display: flex;
+    background-color: #f3f1f1; /* Color oscuro como el 'Ingresar' de la foto */
+    color: rgb(47, 47, 47);
+    padding: 30px 30px 30px 30px;
+    border: 1px solid rgb(69, 69, 69);
+    border-radius: 25px; /* Bordes redondeados */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: rgb(69, 69, 69);
+}
+
+.style-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: color-mix(in srgb, var(--color-verde), transparent 80%);
+    /*opacity: 0.2;   Color oscuro como el 'Ingresar' de la foto */
+    padding: 100px 100px 30px 30px;
+
+}
+.style-footer p {
+    color: #000000; /*No se ven negros*/
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Separa los links entre sí */
+    margin-bottom: 15px;
+}
+
+.footer-nav a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #000000;       /* Mantiene el negro que definimos */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: var(--color-verde); /* Se pone verde cuando pasas el mouse */
+}
+
+
+
+
+/* Responsividad: En celulares se ve una sola columna */
+@media (max-width: 768px) { 
+    /* Cuando la pantalla sea menor a 768px... */
+    .grilla-pasos {
+        grid-template-columns: 1fr; /* Cambia a una sola columna (una arriba de otra) */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Cambia la navegación a un listado vertical */
+    .nav-links {
+        flex-direction: column; /* Pone los elementos uno abajo del otro */
+        align-items: center;    /* Los centra horizontalmente */
+        gap: 15px;              /* Espacio de aire entre cada enlace */
+        padding: 20px 0;
+    }
+
+    /* Ajusta el contenedor del header para que todo se apile */
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,23 @@
+/* Paleta de colores 01 */
+
+:root {
+    /* Colores */
+    --color-turquesa: #32a2ae;    /* Turquesa */
+    --color-verde: #2d8c72;  /* Verde */
+    --color-oscuro: #3f3f3f;      /* Gris de botones */
+    --color-textoT: #000000; /*Texto titulos */
+    --color-texto: #2e2e2e;
+    --color-shdw: #2e2e2e;
+    --radio-borde: 25px;
+    --bg01: #efe1e0;
+    --bgWhite:#ffffff;
+
+    /* Bordes */
+    --borde: #2e2e2e;
+    --radio-borde: 25px;
+    --ancho-borde-btn: 1px;
+
+}
+
+
+
